@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6G Evolution Roadmap</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            padding: 40px 60px;
+            box-sizing: border-box;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
+        
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Text Content */
+        .evolution-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .step {
+            background: rgba(255,255,255,0.03);
+            border-left: 4px solid #38bdf8;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            transition: transform 0.3s;
+        }
+        .step:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.05);
+        }
+        .step h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+            color: #e2e8f0;
+        }
+        .step p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+        .highlight-6g {
+            border-left-color: #818cf8;
+            background: rgba(129, 140, 248, 0.1);
+        }
+
+        /* Gemini Graphic Area */
+        .graphic-container {
+            height: 100%;
+            background: rgba(0,0,0,0.2);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .gemini-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,0,0,0.6);
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(129, 140, 248, 0.3);
+            font-size: 0.8em;
+            color: #a5b4fc;
+        }
+        .gemini-icon {
+            width: 16px;
+            height: 16px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-radius: 4px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.7; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.7; transform: scale(0.9); }
+        }
+
+        /* SVG Styles */
+        svg {
+            width: 90%;
+            height: 90%;
+        }
+        .chart-line {
+            fill: none;
+            stroke-width: 3;
+            stroke-linecap: round;
+        }
+        .chart-area {
+            fill-opacity: 0.2;
+        }
+        .node-circle {
+            transition: all 0.3s;
+        }
+        .node-circle:hover {
+            r: 8;
+            filter: drop-shadow(0 0 5px white);
+        }
+        .chart-text {
+            fill: #94a3b8;
+            font-size: 12px;
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-title-text {
+            fill: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            color: #64748b;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <header>
+            <div>
+                <h1>6G Evolution Strategy</h1>
+                <div class="subtitle">From Connectivity to Intelligent Sensing</div>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 1.5em; font-weight: bold; color: #38bdf8;">2030+</div>
+                <div style="font-size: 0.9em; color: #64748b;">Target Deployment</div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="evolution-steps">
+                <div class="step">
+                    <h3>5G (2020)</h3>
+                    <p><strong>Foundation:</strong> eMBB, uRLLC, mMTC.<br>Peak Rate: 10-20 Gbps.<br>Latency: 1-5ms.</p>
+                </div>
+                <div class="step">
+                    <h3>5G-Advanced (2025)</h3>
+                    <p><strong>Enhancement:</strong> AI/ML Integration, XR & Metaverse ready, RedCap sensors.<br>Uplink Centric Broadband.</p>
+                </div>
+                <div class="step highlight-6g">
+                    <h3>6G (2030)</h3>
+                    <p><strong>Revolution:</strong> Integrated Sensing & Communication (ISAC), Native AI, Digital Twin.<br>Peak Rate: 1 Tbps.<br>Latency: <0.1ms.</p>
+                </div>
+            </div>
+
+            <div class="graphic-container">
+                <div class="gemini-badge">
+                    <div class="gemini-icon"></div>
+                    Generated by Gemini 3
+                </div>
+                
+                <!-- Gemini 3 Generated Infographic (Simulated) -->
+                <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Grid -->
+                    <line x1="50" y1="350" x2="550" y2="350" stroke="#334155" stroke-width="1" />
+                    <line x1="50" y1="50" x2="50" y2="350" stroke="#334155" stroke-width="1" />
+                    
+                    <!-- Labels -->
+                    <text x="50" y="370" class="chart-text">2020</text>
+                    <text x="300" y="370" class="chart-text" text-anchor="middle">2025</text>
+                    <text x="550" y="370" class="chart-text" text-anchor="end">2030</text>
+                    
+                    <!-- 5G Curve (Speed) -->
+                    <path d="M 50 300 Q 175 280 300 200 T 550 50" class="chart-line" stroke="#38bdf8" />
+                    <path d="M 50 300 Q 175 280 300 200 T 550 50 L 550 350 L 50 350 Z" class="chart-area" fill="url(#gradBlue)" />
+                    
+                    <!-- Intelligence Curve -->
+                    <path d="M 50 330 Q 200 320 300 280 T 550 100" class="chart-line" stroke="#818cf8" />
+                    <path d="M 50 330 Q 200 320 300 280 T 550 100 L 550 350 L 50 350 Z" class="chart-area" fill="url(#gradPurple)" />
+
+                    <!-- Data Points -->
+                    <circle cx="50" cy="300" r="4" fill="#38bdf8" class="node-circle" />
+                    <circle cx="300" cy="200" r="4" fill="#38bdf8" class="node-circle" />
+                    <circle cx="550" cy="50" r="6" fill="#fff" stroke="#38bdf8" stroke-width="2" class="node-circle" />
+
+                    <circle cx="50" cy="330" r="4" fill="#818cf8" class="node-circle" />
+                    <circle cx="300" cy="280" r="4" fill="#818cf8" class="node-circle" />
+                    <circle cx="550" cy="100" r="6" fill="#fff" stroke="#818cf8" stroke-width="2" class="node-circle" />
+
+                    <!-- Annotations -->
+                    <g transform="translate(420, 60)">
+                        <rect x="0" y="0" width="120" height="50" rx="5" fill="rgba(15, 23, 42, 0.8)" stroke="#38bdf8" stroke-width="1" />
+                        <text x="10" y="20" class="chart-title-text" font-size="10" fill="#38bdf8">Network Capacity</text>
+                        <text x="10" y="35" class="chart-text" font-size="9">Exp. Growth (1 Tbps)</text>
+                    </g>
+
+                    <g transform="translate(420, 130)">
+                        <rect x="0" y="0" width="120" height="50" rx="5" fill="rgba(15, 23, 42, 0.8)" stroke="#818cf8" stroke-width="1" />
+                        <text x="10" y="20" class="chart-title-text" font-size="10" fill="#818cf8">AI Integration</text>
+                        <text x="10" y="35" class="chart-text" font-size="9">Native Intelligence</text>
+                    </g>
+
+                    <!-- Gradients -->
+                    <defs>
+                        <linearGradient id="gradBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5" />
+                            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="gradPurple" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#818cf8" stop-opacity="0.5" />
+                            <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <footer>
+            <div>Confidential - Internal Use Only</div>
+            <div>Source: Global Telecommunications Standards 2026</div>
+        </footer>
+    </div>
+
+</body>
+</html>
