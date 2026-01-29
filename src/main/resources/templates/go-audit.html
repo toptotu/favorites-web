@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.thymeleaf.org">
+  <head th:include="layout :: htmlhead"></head>
+  <body>
+      <section layout:fragment="content">
+        <div class="content-wrapper">
+          <h3>Go代码审计智能体</h3>
+          <p class="text-muted">输入本地路径或仓库地址，后台执行污点分析与代码切片，并生成问题单。</p>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <form id="go-audit-form" class="form-inline" onsubmit="return false;">
+                <div class="form-group mr">
+                  <label class="radio-inline">
+                    <input type="radio" name="sourceType" value="LOCAL" checked="checked" /> 本地路径
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="sourceType" value="REPO" /> 仓库地址
+                  </label>
+                </div>
+                <div class="form-group mr" style="width: 55%;">
+                  <input id="go-audit-target" type="text" class="form-control" style="width: 100%;"
+                         placeholder="例如: /data/project 或 https://github.com/org/repo.git" />
+                </div>
+                <div class="form-group mr">
+                  <input id="go-audit-branch" type="text" class="form-control" style="width: 120px;"
+                         placeholder="可选分支" />
+                </div>
+                <button id="go-audit-scan" type="button" class="btn btn-primary">开始扫描</button>
+                <button id="go-audit-reset" type="button" class="btn btn-default">清空</button>
+              </form>
+              <div id="go-audit-status" class="text-muted mt"></div>
+              <div id="go-audit-summary" class="mt"></div>
+            </div>
+          </div>
+          <div id="go-audit-results"></div>
+        </div>
+      </section>
+  </body>
+  <script th:src="@{/js/go-audit.js}"></script>
+</html>
